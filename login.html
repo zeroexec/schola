@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Schola</title>
+    <style>
+      :root {
+        --bg-body: #f7f9fa;
+        --bg-card: #ffffff;
+        --text-main: #1a1a1a;
+        --text-muted: #5f6368;
+        --accent: #005a9e;
+        --border-color: #e3e5e8;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background-color: var(--bg-body);
+        color: var(--text-main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-container {
+        background: var(--bg-card);
+        width: 100%;
+        max-width: 400px;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--border-color);
+      }
+
+      .header-login {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .logo {
+        font-weight: 800;
+        font-size: 2rem;
+        color: var(--accent);
+        letter-spacing: -1px;
+        text-transform: lowercase;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .logo span {
+        color: var(--text-main);
+      }
+
+      .header-login p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      /* Form Styling */
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: var(--text-main);
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-size: 14px;
+        transition: border-color 0.2s;
+      }
+
+      .form-group input:focus {
+        outline: none;
+        border-color: var(--accent);
+      }
+
+      .btn-submit {
+        width: 100%;
+        padding: 12px;
+        background-color: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-top: 10px;
+      }
+
+      .btn-submit:hover {
+        background-color: #004578;
+      }
+
+      .footer-login {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 0.85rem;
+      }
+
+      .footer-login a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .back-home {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+
+      .back-home:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="header-login">
+        <a href="index.html" class="logo">schola<span>.</span></a>
+        <p>Masuk ke akun Anda untuk melanjutkan</p>
+      </div>
+
+      <form action="dashboard_sekolah.html" method="GET">
+        <div class="form-group">
+          <label for="email">Email atau NISN</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Masukkan email atau NISN"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Kata Sandi</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Masukkan kata sandi"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn-submit">Masuk</button>
+      </form>
+
+      <div class="footer-login">
+        <p>Lupa kata sandi? <a href="#">Hubungi Admin IT</a></p>
+      </div>
+
+      <a href="index.html" class="back-home">← Kembali ke halaman utama</a>
+    </div>
+  </body>
+</html>
